@@ -7,7 +7,7 @@ RUN npm install --production --registry https://registry.npm.taobao.org
 
 FROM node:latest
 WORKDIR /project/jdn
-COPY --from=builder /project/node/node_modules ./node_modules
+COPY --from=builder /project/node/node_modules /project/jdn/node_modules
 COPY . /project/jdn
 # RUN npm install --registry https://registry.npm.taobao.org
 RUN npm run build
