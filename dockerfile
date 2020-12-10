@@ -10,5 +10,7 @@ RUN npm run build
 
 EXPOSE 7001
 
-CMD ["npm", "run", "start"]
+# CMD ["rm", "-rf", "node_modules"]
+
+CMD ["npm", "run", "start_build"]
 
