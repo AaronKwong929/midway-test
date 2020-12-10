@@ -9,7 +9,7 @@
 FROM node:latest
 WORKDIR /project/jdn
 COPY package.json /project/jdn
-RUN cd /project/jdn && RUN npm install --registry https://registry.npm.taobao.org
+RUN RUN npm install --registry https://registry.npm.taobao.org
 
 COPY . /project/jdn
 RUN npm run build
