@@ -14,7 +14,7 @@ FROM node:15.5.0-alpine3.10
 
 # RUN echo "Asia/Shanghai" > /etc/timezone
 
-RUN npm install npm@latest
+# RUN npm install npm@latest
 
 WORKDIR /project/jdn
 COPY package.json /project/jdn
