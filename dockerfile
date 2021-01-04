@@ -7,7 +7,7 @@
 # EXPOSE 7001
 # CMD ["npm", "run", "start_build"]
 
-FROM alpone AS builder
+FROM alpine AS builder
 WORKDIR /project/jdn
 RUN apk add --no-cache --update nodejs nodejs-npm
 COPY package.json package-lock.json ./
