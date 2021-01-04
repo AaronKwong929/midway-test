@@ -6,7 +6,7 @@
 # EXPOSE 7001
 # CMD ["npm", "run", "start_build"]
 
-FROM node:15.5.0-alpine3.10
+FROM node:latest
 # RUN apk --update add tzdata \
 #     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 #     && echo "Asia/Shanghai" > /etc/timezone \
@@ -18,7 +18,7 @@ FROM node:15.5.0-alpine3.10
 
 WORKDIR /project/jdn
 COPY package.json /project/jdn
-RUN cd /project/jdn && npm install --registry https://registry.npm.taobao.org
+RUN cd /project/jdn && npm install --registry https://registry.npm.taobao.org --legacy-peer-deps
 
 COPY . /project/jdn
 RUN npm run build
