@@ -6,7 +6,7 @@
 # EXPOSE 7001
 # CMD ["npm", "run", "start_build"]
 
-FROM node:15.3.0-alpine
+FROM node:15.5.0-alpine3.10
 # RUN apk --update add tzdata \
 #     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 #     && echo "Asia/Shanghai" > /etc/timezone \
