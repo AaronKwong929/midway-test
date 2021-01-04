@@ -14,6 +14,8 @@ FROM node:15.3.0-alpine
 
 # RUN echo "Asia/Shanghai" > /etc/timezone
 
+RUN npm install npm@latest
+
 WORKDIR /project/jdn
 COPY package.json /project/jdn
 RUN cd /project/jdn && npm install --registry https://registry.npm.taobao.org
