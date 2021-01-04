@@ -7,12 +7,12 @@
 # CMD ["npm", "run", "start_build"]
 
 FROM node:15.3.0-alpine
-RUN apk --update add tzdata \
-    && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-    && echo "Asia/Shanghai" > /etc/timezone \
-    && apk del tzdata
+# RUN apk --update add tzdata \
+#     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+#     && echo "Asia/Shanghai" > /etc/timezone \
+#     && apk del tzdata
 
-RUN echo "Asia/Shanghai" > /etc/timezone
+# RUN echo "Asia/Shanghai" > /etc/timezone
 
 WORKDIR /project/jdn
 COPY package.json /project/jdn
